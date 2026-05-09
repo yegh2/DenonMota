@@ -6,9 +6,9 @@
     <title>页gh|Objection</title>
 </head>
 <body>
-    <div id="xyz">11</div>
-    <div id="1">11</div>
-    <button onclick="requestPermission()">111</button>
+    <img src="objection.png" alt="Objection" style="display: none;">
+    <div id="xyz"></div>
+    <button onclick="requestPermission()">开始</button>
     <script>
         function requestPermission() {
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
@@ -34,6 +34,12 @@
         const y = acc.y ?? 0;
         const z = acc.z ?? 0;
 
+        if (x > 0.2 || x < -0.2){
+            setTimeout(() => {
+                document.querySelector('img').style.display = 'none';
+            }, 2000);
+            document.querySelector('img').style.display = 'block';
+        } 
         document.getElementById("xyz").innerHTML = `X: ${x.toFixed(2)}<br>Y: ${y.toFixed(2)}<br>Z: ${z.toFixed(2)}`;
     });
 }
