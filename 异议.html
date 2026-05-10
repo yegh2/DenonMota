@@ -8,18 +8,22 @@
 <body>
     <img src="异议/objection.png" alt="Objection" style="display: none;" id="img">
     <div id="xyz"></div>
-    <select id="neirong">
-        <option value="igiari" onselect="changeNeirong(this.value)">異議あり!</option>
-        <option value="objection" onselect="changeNeirong(this.value)">Objection</option>
-        <option value="0.3" onselect="changeNeirong(this.value)">111</option>
+    <select id="neirong" onchange="changeNeirong(this.value)">
+        <option value="igiari">異議あり!</option>
+        <option value="objection">Objection</option>
+        <option value="0.3">111</option>
     </select>
     <button onclick="requestPermission()">开始</button>
     <script>
+        // 默认选中的音频对象（与第一个 option 一致）
+        let Sound = new Audio('异议/igiari.mp3');
+
         function changeNeirong(value) {
-            var neirong = value;
-            document.getElementById("img").src = `异议/${neirong}.png`;
-            document.getElementById("img").alt = `异议/${neirong}.png`;
-            alert(`异议/${neirong}.png`);
+            // 更新图片
+            document.getElementById("img").src = `异议/${value}.png`;
+            document.getElementById("img").alt = `异议/${value}.png`;
+            // 更新音频对象
+            Sound = new Audio(`异议/${value}.mp3`);
         }
 
         function requestPermission() {
@@ -35,20 +39,16 @@
                     })
                     .catch(console.error);
             } else {
-                // Android 或旧版 iOS 直接监听即可
                 startListening();
             }
         }
 
-        const Sound = new Audio(`异议/${neirong}.mp3`);
-
         function unlockAudio() {
-            // 尝试播放后立即暂停，获得后续播放权限
             Sound.play().then(() => {
                 Sound.pause();
                 Sound.currentTime = 0;
             }).catch(e => console.warn('音频解锁失败', e));
-}
+        }
 
         function startListening() {
             window.addEventListener('devicemotion', (event) => {
