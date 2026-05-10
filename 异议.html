@@ -7,7 +7,8 @@
 </head>
 <body>
     <img src="异议/objection.png" alt="Objection" style="display: none;" id="img">
-    <div id="xyz"></div>
+    <div id="accxyz"></div>
+    <div id="mouxyz"></div>
     <select id="neirong" onchange="changeNeirong(this.value)">
         <option value="objection">Objection</option>
         <option value="igiari">異議あり!</option>
@@ -70,7 +71,7 @@
                 if (x > 0.2 || x < -0.2 || y > 0.2 || y < -0.2 || z > 0.2 || z < -0.2) {
                     once();
                 } 
-                document.getElementById("xyz").innerHTML = `X: ${x.toFixed(2)}, Y: ${y.toFixed(2)}, Z: ${z.toFixed(2)}`;
+                document.getElementById("accxyz").innerHTML = `X: ${x.toFixed(2)}, Y: ${y.toFixed(2)}, Z: ${z.toFixed(2)}`;
             });
 
             var lastMouseX = event.clientX;
@@ -82,6 +83,7 @@
                 }
                 lastMouseX = event.clientX;
                 lastMouseY = event.clientY;
+                document.getElementById("mouxyz").innerHTML = `X: ${lastMouseX.toFixed(2)}, Y: ${lastMouseY.toFixed(2)}`;
             });
         }
     </script>
