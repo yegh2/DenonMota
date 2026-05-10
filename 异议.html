@@ -6,7 +6,6 @@
     <title>页gh|异议</title>
 </head>
 <body>
-    <img src="异议/objection.png" alt="Objection" style="display: none;" id="img">
     <div id="accxyz"></div>
     <div id="mouxyz"></div>
     <select id="neirong" onchange="changeNeirong(this.value)">
@@ -16,9 +15,10 @@
         <option value="kurae">くらえ!</option>
     </select>
     <button onclick="requestPermission()">开始</button>
+    <img src="异议/objection.png" alt="Objection" style="display: none;" id="img">
     <script>
         // 默认选中的音频对象（与第一个 option 一致）
-        let Sound = new Audio('异议/igiari.mp3');
+        let Sound = new Audio('异议/objection.mp3');
 
         function changeNeirong(value) {
             // 更新图片
