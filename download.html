@@ -43,7 +43,18 @@
             letter-spacing: 2px;
             white-space: nowrap;
         }
-        .floating-nav nav { display: flex; gap: 0; }
+        .floating-nav nav { display: flex; gap: 0; position: relative; }
+        .floating-nav .indicator {
+            position: absolute;
+            top: 8px;
+            height: 36px;
+            border-radius: 20px;
+            background: rgba(58,58,140,0.1);
+            z-index: -1;
+            pointer-events: none;
+            transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                        width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
         .floating-nav nav a {
             display: block;
             padding: 8px 18px;
@@ -61,7 +72,7 @@
         }
         .floating-nav nav a.active {
             color: #3a3a8c;
-            background: rgba(58,58,140,0.1);
+            background: transparent;
             font-weight: 500;
         }
 
@@ -166,6 +177,7 @@
     <div class="floating-nav">
         <a href="index.html" class="logo">靛音もた</a>
         <nav>
+            <div class="indicator"></div>
             <a href="index.html">首页</a>
             <a href="profile.html">角色</a>
             <a href="music.html">音乐</a>
@@ -206,6 +218,32 @@
         <p>&copy; 2026 靛音もた</p>
     </footer>
 
+    <script>
+    (function() {
+        var indicator = document.querySelector('.floating-nav .indicator');
+        var nav = document.querySelector('.floating-nav nav');
+        var activeLink = nav.querySelector('a.active');
+        var logo = document.querySelector('.floating-nav .logo');
+        if (indicator && activeLink && nav) {
+            var navRect = nav.getBoundingClientRect();
+            var linkRect = activeLink.getBoundingClientRect();
+            var targetLeft = linkRect.left - navRect.left;
+            var targetWidth = linkRect.width;
+            var logoRect = logo.getBoundingClientRect();
+            var startLeft = logoRect.right - navRect.left + 4;
+            indicator.style.transition = 'none';
+            indicator.style.left = startLeft + 'px';
+            indicator.style.width = '0px';
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                    indicator.style.transition = 'left 0.5s cubic-bezier(0.16, 1, 0.3, 1), width 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+                    indicator.style.left = targetLeft + 'px';
+                    indicator.style.width = targetWidth + 'px';
+                });
+            });
+        }
+    })();
+    </script>
 
 </body>
 </html>
