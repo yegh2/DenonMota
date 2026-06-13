@@ -205,24 +205,47 @@
         var nav = document.querySelector('.floating-nav nav');
         var activeLink = nav.querySelector('a.active');
         var logo = document.querySelector('.floating-nav .logo');
-        if (indicator && activeLink && nav) {
-            var navRect = nav.getBoundingClientRect();
-            var linkRect = activeLink.getBoundingClientRect();
-            var targetLeft = linkRect.left - navRect.left;
-            var targetWidth = linkRect.width;
+        if (!indicator || !activeLink || !nav) return;
+
+        var navRect = nav.getBoundingClientRect();
+        var linkRect = activeLink.getBoundingClientRect();
+        var targetLeft = linkRect.left - navRect.left;
+        var targetWidth = linkRect.width;
+
+        var fromLeft = localStorage.getItem('navFromLeft');
+        var fromWidth = localStorage.getItem('navFromWidth');
+        localStorage.removeItem('navFromLeft');
+        localStorage.removeItem('navFromWidth');
+
+        var startLeft, startWidth;
+        if (fromLeft !== null && fromWidth !== null) {
+            startLeft = parseFloat(fromLeft);
+            startWidth = parseFloat(fromWidth);
+        } else {
             var logoRect = logo.getBoundingClientRect();
-            var startLeft = logoRect.right - navRect.left + 4;
-            indicator.style.transition = 'none';
-            indicator.style.left = startLeft + 'px';
-            indicator.style.width = '0px';
-            requestAnimationFrame(function() {
-                requestAnimationFrame(function() {
-                    indicator.style.transition = 'left 0.5s cubic-bezier(0.16, 1, 0.3, 1), width 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
-                    indicator.style.left = targetLeft + 'px';
-                    indicator.style.width = targetWidth + 'px';
-                });
-            });
+            startLeft = logoRect.right - navRect.left + 4;
+            startWidth = 0;
         }
+
+        indicator.style.transition = 'none';
+        indicator.style.left = startLeft + 'px';
+        indicator.style.width = startWidth + 'px';
+
+        requestAnimationFrame(function() {
+            requestAnimationFrame(function() {
+                indicator.style.transition = 'left 0.5s cubic-bezier(0.16, 1, 0.3, 1), width 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+                indicator.style.left = targetLeft + 'px';
+                indicator.style.width = targetWidth + 'px';
+            });
+        });
+
+        nav.querySelectorAll('a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                var r = this.getBoundingClientRect();
+                localStorage.setItem('navFromLeft', r.left - navRect.left);
+                localStorage.setItem('navFromWidth', r.width);
+            });
+        });
     })();
     </script>
 
