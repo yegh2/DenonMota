@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>角色档案 - 靛音もた</title>
+    <link rel="icon" href="favicon.png">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #fafaf8;
+            color: #444;
+            line-height: 1.8;
+            min-height: 100vh;
+            overflow-x: hidden;
+            animation: bodyIn 0.35s ease;
+        }
+        body.exiting {
+            animation: bodyOut 0.18s ease forwards;
+        }
+        @keyframes bodyIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @keyframes bodyOut {
+            to { opacity: 0; }
+        }
+
+        .floating-nav {
+            position: fixed;
+            top: 16px; left: 50%;
+            transform: translateX(-50%);
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 8px;
+            background: rgba(255,255,255,0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 40px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.06);
+            animation: navIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes navIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(-12px); }
+            to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        .floating-nav .logo {
+            font-weight: 600;
+            color: #3a3a8c;
+            text-decoration: none;
+            padding: 6px 16px;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+        .floating-nav nav { display: flex; gap: 0; }
+        .floating-nav nav a {
+            display: block;
+            padding: 6px 14px;
+            text-decoration: none;
+            color: #999;
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+            border-radius: 20px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            white-space: nowrap;
+            position: relative;
+        }
+        .floating-nav nav a:active {
+            transform: scale(0.9);
+            transition: transform 0.1s;
+        }
+        .floating-nav nav a:hover {
+            color: #3a3a8c;
+            background: rgba(58,58,140,0.06);
+        }
+        .floating-nav nav a.active {
+            color: #3a3a8c;
+            background: rgba(58,58,140,0.1);
+            font-weight: 500;
+            animation: pillIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes pillIn {
+            from { background: transparent; color: #999; }
+            to   { background: rgba(58,58,140,0.1); color: #3a3a8c; }
+        }
+
+        .sub-page {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 80px 24px 80px;
+            animation: fadeIn 0.4s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .sec-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #3a3a8c;
+            margin-bottom: 32px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+            letter-spacing: 2px;
+        }
+
+        .profile-layout {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+        }
+        .profile-img img {
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-text { flex: 1; }
+        .profile-text p {
+            margin-bottom: 8px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .profile-text .label {
+            color: #3a3a8c;
+            font-weight: 500;
+            width: 80px;
+            display: inline-block;
+        }
+        .profile-desc {
+            margin-top: 20px;
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: #ddd;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 640px) {
+            .floating-nav {
+                top: 8px;
+                border-radius: 30px;
+                padding: 4px 6px;
+            }
+            .floating-nav .logo { font-size: 0.85rem; padding: 5px 10px; }
+            .floating-nav nav a { font-size: 0.72rem; padding: 5px 8px; }
+            .sub-page { padding: 72px 16px 60px; }
+            .profile-layout { flex-direction: column; align-items: center; text-align: center; }
+            .profile-text .label { display: block; width: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="floating-nav">
+        <a href="index.html" class="logo">靛音もた</a>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="profile.html" class="active">角色</a>
+            <a href="music.html">音乐</a>
+            <a href="news.html">动态</a>
+            <a href="download.html">下载</a>
+        </nav>
+    </div>
+
+    <div class="sub-page">
+        <h2 class="sec-title">角色档案</h2>
+        <div class="profile-layout">
+            <div class="profile-img">
+                <!-- 替换为 <img src="头像路径" alt="靛音もた"> -->
+                形象图片
+            </div>
+            <div class="profile-text">
+                <!-- 在这里填写角色信息，示例： -->
+                <!-- <p><span class="label">姓名</span> 靛音 もた</p> -->
+                <!-- <p><span class="label">性别</span> 女</p> -->
+                <!-- <p><span class="label">年龄</span> 16岁</p> -->
+                <!-- <p><span class="label">身高</span> 158cm</p> -->
+                <!-- <p><span class="label">擅长的音域</span> A3～D5</p> -->
+                <!-- <p><span class="label">喜欢的事物</span> 唱歌、星空</p> -->
+            </div>
+        </div>
+        <div class="profile-desc">
+            <!-- 在这里写角色简介 -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 靛音もた</p>
+    </footer>
+
+    <script>
+    (function() {
+        var links = document.querySelectorAll('.floating-nav nav a');
+        links.forEach(function(a) {
+            a.addEventListener('click', function(e) {
+                var href = this.getAttribute('href');
+                if (!href || href === '#') return;
+                e.preventDefault();
+                document.body.classList.add('exiting');
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 160);
+            });
+        });
+    })();
+    </script>
+
+</body>
+</html>
