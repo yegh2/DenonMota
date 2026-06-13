@@ -152,11 +152,7 @@
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
             justify-content: center;
-            cursor: grab;
-            user-select: none;
         }
-        .card-row:active { cursor: grabbing; }
-        .card-row.dragging { cursor: grabbing; scroll-snap-type: none; }
         .card {
             flex: 0 0 200px;
             scroll-snap-align: start;
@@ -293,36 +289,11 @@
     (function() {
         var row = document.querySelector('.card-row');
         if (!row) return;
-        var isDown = false, startX, scrollLeft;
-        row.addEventListener('mousedown', function(e) {
-            isDown = true;
-            row.classList.add('dragging');
-            startX = e.pageX - row.offsetLeft;
-            scrollLeft = row.scrollLeft;
-        });
-        row.addEventListener('mouseleave', function() {
-            isDown = false;
-            row.classList.remove('dragging');
-        });
-        row.addEventListener('mouseup', function() {
-            isDown = false;
-            row.classList.remove('dragging');
-        });
-        row.addEventListener('mousemove', function(e) {
-            if (!isDown) return;
+        row.addEventListener('wheel', function(e) {
+            if (e.deltaY === 0) return;
             e.preventDefault();
-            var x = e.pageX - row.offsetLeft;
-            var walk = (x - startX) * 1.5;
-            row.scrollLeft = scrollLeft - walk;
-        });
-        // Prevent card click during drag
-        row.querySelectorAll('.card').forEach(function(card) {
-            card.addEventListener('click', function(e) {
-                if (isDown || row.classList.contains('dragging')) {
-                    e.preventDefault();
-                }
-            });
-        });
+            row.scrollLeft += e.deltaY;
+        }, { passive: false });
     })();
     </script>
 
