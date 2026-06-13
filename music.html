@@ -249,14 +249,11 @@
         indicator.style.transition = 'none';
         indicator.style.left = startLeft + 'px';
         indicator.style.width = startWidth + 'px';
+        void indicator.offsetHeight;
 
-        requestAnimationFrame(function() {
-            requestAnimationFrame(function() {
-                indicator.style.transition = 'left 0.5s cubic-bezier(0.16, 1, 0.3, 1), width 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
-                indicator.style.left = targetLeft + 'px';
-                indicator.style.width = targetWidth + 'px';
-            });
-        });
+        indicator.style.transition = 'left 0.5s cubic-bezier(0.16, 1, 0.3, 1), width 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        indicator.style.left = targetLeft + 'px';
+        indicator.style.width = targetWidth + 'px';
 
         nav.querySelectorAll('a').forEach(function(a) {
             a.addEventListener('click', function() {
