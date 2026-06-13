@@ -7,6 +7,8 @@
     <link rel="icon" href="favicon.png">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        ::-webkit-scrollbar { display: none; }
+        * { scrollbar-width: none; }
         body {
             font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
             background: #fafaf8;
@@ -14,17 +16,6 @@
             line-height: 1.8;
             min-height: 100vh;
             overflow-x: hidden;
-            animation: bodyIn 0.35s ease;
-        }
-        body.exiting {
-            animation: bodyOut 0.18s ease forwards;
-        }
-        @keyframes bodyIn {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-        @keyframes bodyOut {
-            to { opacity: 0; }
         }
 
         .floating-nav {
@@ -42,11 +33,6 @@
             border-radius: 40px;
             box-shadow: 0 2px 20px rgba(0,0,0,0.06);
             border: 1px solid rgba(0,0,0,0.06);
-            animation: navIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        @keyframes navIn {
-            from { opacity: 0; transform: translateX(-50%) translateY(-12px); }
-            to   { opacity: 1; transform: translateX(-50%) translateY(0); }
         }
         .floating-nav .logo {
             font-weight: 600;
@@ -66,13 +52,8 @@
             font-size: 0.82rem;
             letter-spacing: 1px;
             border-radius: 20px;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.25s;
             white-space: nowrap;
-            position: relative;
-        }
-        .floating-nav nav a:active {
-            transform: scale(0.9);
-            transition: transform 0.1s;
         }
         .floating-nav nav a:hover {
             color: #3a3a8c;
@@ -82,11 +63,6 @@
             color: #3a3a8c;
             background: rgba(58,58,140,0.1);
             font-weight: 500;
-            animation: pillIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        @keyframes pillIn {
-            from { background: transparent; color: #999; }
-            to   { background: rgba(58,58,140,0.1); color: #3a3a8c; }
         }
 
         .sub-page {
@@ -227,22 +203,6 @@
         <p>&copy; 2026 靛音もた</p>
     </footer>
 
-    <script>
-    (function() {
-        var links = document.querySelectorAll('.floating-nav nav a');
-        links.forEach(function(a) {
-            a.addEventListener('click', function(e) {
-                var href = this.getAttribute('href');
-                if (!href || href === '#') return;
-                e.preventDefault();
-                document.body.classList.add('exiting');
-                setTimeout(function() {
-                    window.location.href = href;
-                }, 160);
-            });
-        });
-    })();
-    </script>
 
 </body>
 </html>
