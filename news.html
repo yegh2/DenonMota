@@ -25,8 +25,8 @@
             z-index: 200;
             display: flex;
             align-items: center;
-            gap: 4px;
-            padding: 6px 8px;
+            gap: 6px;
+            padding: 8px 12px;
             background: rgba(255,255,255,0.82);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
@@ -38,18 +38,18 @@
             font-weight: 600;
             color: #3a3a8c;
             text-decoration: none;
-            padding: 6px 16px;
-            font-size: 0.95rem;
+            padding: 8px 20px;
+            font-size: 1.15rem;
             letter-spacing: 2px;
             white-space: nowrap;
         }
         .floating-nav nav { display: flex; gap: 0; }
         .floating-nav nav a {
             display: block;
-            padding: 6px 14px;
+            padding: 8px 18px;
             text-decoration: none;
             color: #999;
-            font-size: 0.82rem;
+            font-size: 0.95rem;
             letter-spacing: 1px;
             border-radius: 20px;
             transition: all 0.25s;
@@ -66,9 +66,9 @@
         }
 
         .sub-page {
-            max-width: 700px;
+            max-width: 860px;
             margin: 0 auto;
-            padding: 80px 24px 80px;
+            padding: 100px 32px 80px;
             animation: fadeIn 0.4s ease;
         }
         @keyframes fadeIn {
@@ -76,11 +76,11 @@
             to   { opacity: 1; transform: translateY(0); }
         }
         .sec-title {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             font-weight: 400;
             color: #3a3a8c;
-            margin-bottom: 32px;
-            padding-bottom: 12px;
+            margin-bottom: 36px;
+            padding-bottom: 14px;
             border-bottom: 1px solid #eee;
             letter-spacing: 2px;
         }
@@ -88,7 +88,7 @@
         .news-item {
             display: flex;
             gap: 24px;
-            padding: 20px 24px;
+            padding: 24px 28px;
             background: #fff;
             border: 1px solid #eee;
             border-radius: 10px;
@@ -107,12 +107,12 @@
             color: #3a3a8c;
         }
         .news-date .d {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             line-height: 1.2;
             font-weight: 300;
         }
         .news-date .m {
-            font-size: 0.75rem;
+            font-size: 0.82rem;
             color: #bbb;
             margin-top: 2px;
         }
@@ -120,31 +120,31 @@
         .news-body h4 {
             font-weight: 400;
             color: #444;
-            margin-bottom: 4px;
-            font-size: 1rem;
+            margin-bottom: 6px;
+            font-size: 1.1rem;
         }
         .news-body p {
             color: #aaa;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             line-height: 1.6;
         }
 
         footer {
             text-align: center;
-            padding: 24px;
+            padding: 32px;
             color: #ddd;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 640px) {
             .floating-nav {
                 top: 8px;
                 border-radius: 30px;
-                padding: 4px 6px;
+                padding: 6px 8px;
             }
-            .floating-nav .logo { font-size: 0.85rem; padding: 5px 10px; }
-            .floating-nav nav a { font-size: 0.72rem; padding: 5px 8px; }
-            .sub-page { padding: 72px 16px 60px; }
+            .floating-nav .logo { font-size: 0.95rem; padding: 6px 12px; }
+            .floating-nav nav a { font-size: 0.8rem; padding: 6px 10px; }
+            .sub-page { padding: 80px 16px 60px; }
             .news-item { flex-direction: column; gap: 8px; padding: 16px 18px; }
             .news-date { width: auto; text-align: left; display: flex; gap: 8px; align-items: baseline; }
         }
