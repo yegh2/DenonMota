@@ -53,6 +53,357 @@
       "delisted": false,
       "last_source": "onEdit",
       "last_content_hash": "b95bf0a7"
+    },
+    ".agents/skills/impeccable/SKILL.md": {
+      "ipo_ts": 1782819819414,
+      "edit_count": 1,
+      "last_lines": 183,
+      "last_ts": 1782819819414,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "927a54ea"
+    },
+    ".agents/skills/impeccable/reference/adapt.md": {
+      "ipo_ts": 1782819819609,
+      "edit_count": 1,
+      "last_lines": 190,
+      "last_ts": 1782819819609,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "163643f1"
+    },
+    ".agents/skills/impeccable/reference/animate.md": {
+      "ipo_ts": 1782819819623,
+      "edit_count": 1,
+      "last_lines": 175,
+      "last_ts": 1782819819623,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "933ec4b1"
+    },
+    ".agents/skills/impeccable/reference/bolder.md": {
+      "ipo_ts": 1782819819637,
+      "edit_count": 1,
+      "last_lines": 113,
+      "last_ts": 1782819819637,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "a4c2eec8"
+    },
+    ".agents/skills/impeccable/reference/craft.md": {
+      "ipo_ts": 1782819819652,
+      "edit_count": 1,
+      "last_lines": 123,
+      "last_ts": 1782819819652,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "aae6d2b3"
+    },
+    ".agents/skills/impeccable/reference/delight.md": {
+      "ipo_ts": 1782819819666,
+      "edit_count": 1,
+      "last_lines": 302,
+      "last_ts": 1782819819666,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "b8c4f39f"
+    },
+    ".agents/skills/impeccable/reference/distill.md": {
+      "ipo_ts": 1782819819679,
+      "edit_count": 1,
+      "last_lines": 111,
+      "last_ts": 1782819819679,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "ce612d27"
+    },
+    ".agents/skills/impeccable/reference/interaction-design.md": {
+      "ipo_ts": 1782819819694,
+      "edit_count": 1,
+      "last_lines": 195,
+      "last_ts": 1782819819694,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "6cee149a"
+    },
+    ".agents/skills/impeccable/reference/document.md": {
+      "ipo_ts": 1782819819939,
+      "edit_count": 1,
+      "last_lines": 427,
+      "last_ts": 1782819819939,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "31a57dd5"
+    },
+    ".agents/skills/impeccable/reference/extract.md": {
+      "ipo_ts": 1782819819953,
+      "edit_count": 1,
+      "last_lines": 69,
+      "last_ts": 1782819819953,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "266f710e"
+    },
+    ".agents/skills/impeccable/reference/live.md": {
+      "ipo_ts": 1782819819968,
+      "edit_count": 1,
+      "last_lines": 622,
+      "last_ts": 1782819819968,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "c012134b"
+    },
+    ".agents/skills/impeccable/reference/motion-design.md": {
+      "ipo_ts": 1782819819980,
+      "edit_count": 1,
+      "last_lines": 109,
+      "last_ts": 1782819819980,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "ca998fa8"
+    },
+    ".agents/skills/impeccable/reference/onboard.md": {
+      "ipo_ts": 1782819819995,
+      "edit_count": 1,
+      "last_lines": 234,
+      "last_ts": 1782819819995,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "5ece0ef5"
+    },
+    ".agents/skills/impeccable/reference/optimize.md": {
+      "ipo_ts": 1782819820009,
+      "edit_count": 1,
+      "last_lines": 258,
+      "last_ts": 1782819820009,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "b07684f2"
+    },
+    ".agents/skills/impeccable/reference/responsive-design.md": {
+      "ipo_ts": 1782819820023,
+      "edit_count": 1,
+      "last_lines": 114,
+      "last_ts": 1782819820023,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "82b684ab"
+    },
+    ".agents/skills/impeccable/reference/spatial-design.md": {
+      "ipo_ts": 1782819820036,
+      "edit_count": 1,
+      "last_lines": 100,
+      "last_ts": 1782819820036,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "773f8ca7"
+    },
+    ".agents/skills/impeccable/reference/teach.md": {
+      "ipo_ts": 1782819820050,
+      "edit_count": 1,
+      "last_lines": 156,
+      "last_ts": 1782819820050,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "20712d57"
+    },
+    ".agents/skills/impeccable/docs/banner.png": {
+      "ipo_ts": 1782819820625,
+      "edit_count": 1,
+      "last_lines": 183,
+      "last_ts": 1782819820625,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "d37be2a1"
+    },
+    ".agents/skills/impeccable/reference/audit.md": {
+      "ipo_ts": 1782819820642,
+      "edit_count": 1,
+      "last_lines": 133,
+      "last_ts": 1782819820642,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "d58bea07"
+    },
+    ".agents/skills/impeccable/reference/brand.md": {
+      "ipo_ts": 1782819820658,
+      "edit_count": 1,
+      "last_lines": 118,
+      "last_ts": 1782819820658,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "323fff4c"
+    },
+    ".agents/skills/impeccable/reference/clarify.md": {
+      "ipo_ts": 1782819820673,
+      "edit_count": 1,
+      "last_lines": 174,
+      "last_ts": 1782819820673,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "2541dac4"
+    },
+    ".agents/skills/impeccable/reference/codex.md": {
+      "ipo_ts": 1782819820689,
+      "edit_count": 1,
+      "last_lines": 105,
+      "last_ts": 1782819820689,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "35f15ce0"
+    },
+    ".agents/skills/impeccable/reference/cognitive-load.md": {
+      "ipo_ts": 1782819820705,
+      "edit_count": 1,
+      "last_lines": 106,
+      "last_ts": 1782819820705,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "a40c11c4"
+    },
+    ".agents/skills/impeccable/reference/color-and-contrast.md": {
+      "ipo_ts": 1782819820721,
+      "edit_count": 1,
+      "last_lines": 105,
+      "last_ts": 1782819820721,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "c2a28a2d"
+    },
+    ".agents/skills/impeccable/reference/colorize.md": {
+      "ipo_ts": 1782819820735,
+      "edit_count": 1,
+      "last_lines": 154,
+      "last_ts": 1782819820735,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "8ad88f90"
+    },
+    ".agents/skills/impeccable/reference/critique.md": {
+      "ipo_ts": 1782819820753,
+      "edit_count": 1,
+      "last_lines": 273,
+      "last_ts": 1782819820753,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "46268254"
+    },
+    ".agents/skills/impeccable/reference/harden.md": {
+      "ipo_ts": 1782819820769,
+      "edit_count": 1,
+      "last_lines": 347,
+      "last_ts": 1782819820769,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "29198f5"
+    },
+    ".agents/skills/impeccable/reference/heuristics-scoring.md": {
+      "ipo_ts": 1782819820785,
+      "edit_count": 1,
+      "last_lines": 234,
+      "last_ts": 1782819820785,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "27ed9626"
+    },
+    ".agents/skills/impeccable/reference/layout.md": {
+      "ipo_ts": 1782819820801,
+      "edit_count": 1,
+      "last_lines": 141,
+      "last_ts": 1782819820801,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "a49b6a3f"
+    },
+    ".agents/skills/impeccable/reference/overdrive.md": {
+      "ipo_ts": 1782819820816,
+      "edit_count": 1,
+      "last_lines": 130,
+      "last_ts": 1782819820816,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "8dbc7d2e"
+    },
+    ".agents/skills/impeccable/reference/personas.md": {
+      "ipo_ts": 1782819820830,
+      "edit_count": 1,
+      "last_lines": 179,
+      "last_ts": 1782819820830,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "232f3b2e"
+    },
+    ".agents/skills/impeccable/reference/polish.md": {
+      "ipo_ts": 1782819820846,
+      "edit_count": 1,
+      "last_lines": 242,
+      "last_ts": 1782819820846,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "e0f6c96"
+    },
+    ".agents/skills/impeccable/reference/product.md": {
+      "ipo_ts": 1782819820865,
+      "edit_count": 1,
+      "last_lines": 62,
+      "last_ts": 1782819820865,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "4ebf71a1"
+    },
+    ".agents/skills/impeccable/reference/quieter.md": {
+      "ipo_ts": 1782819820880,
+      "edit_count": 1,
+      "last_lines": 99,
+      "last_ts": 1782819820880,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "8faea50e"
+    },
+    ".agents/skills/impeccable/reference/shape.md": {
+      "ipo_ts": 1782819820895,
+      "edit_count": 1,
+      "last_lines": 165,
+      "last_ts": 1782819820895,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "4fe7a3a1"
+    },
+    ".agents/skills/impeccable/reference/typeset.md": {
+      "ipo_ts": 1782819820913,
+      "edit_count": 1,
+      "last_lines": 124,
+      "last_ts": 1782819820913,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "199b794f"
+    },
+    ".agents/skills/impeccable/reference/typography.md": {
+      "ipo_ts": 1782819820929,
+      "edit_count": 1,
+      "last_lines": 159,
+      "last_ts": 1782819820929,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "f43e9ab1"
+    },
+    ".agents/skills/impeccable/reference/ux-writing.md": {
+      "ipo_ts": 1782819820946,
+      "edit_count": 1,
+      "last_lines": 107,
+      "last_ts": 1782819820946,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "685039c8"
+    },
+    ".agents/skills/impeccable/docs/how-impeccable-works.png": {
+      "ipo_ts": 1782819820969,
+      "edit_count": 1,
+      "last_lines": 291,
+      "last_ts": 1782819820969,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "61becd8b"
     }
   }
 }
