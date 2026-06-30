@@ -2,9 +2,9 @@
   "symbols": {
     "index.html": {
       "ipo_ts": 1781328499965,
-      "edit_count": 33,
+      "edit_count": 35,
       "last_lines": 312,
-      "last_ts": 1781337379805,
+      "last_ts": 1782393418518,
       "delisted": false,
       "last_source": "onEdit",
       "last_content_hash": "27eabdf2"
@@ -44,6 +44,15 @@
       "delisted": false,
       "last_source": "onEdit",
       "last_content_hash": "656b79e6"
+    },
+    ".agents/skills/gpt-taste/SKILL.md": {
+      "ipo_ts": 1782819362122,
+      "edit_count": 1,
+      "last_lines": 74,
+      "last_ts": 1782819362122,
+      "delisted": false,
+      "last_source": "onEdit",
+      "last_content_hash": "b95bf0a7"
     }
   }
 }
