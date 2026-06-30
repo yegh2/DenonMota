@@ -11,9 +11,9 @@
         * { scrollbar-width: none; }
         body {
             font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-            background: #fafaf8;
-            color: #444;
-            line-height: 1.8;
+            background: #f9f8fc;
+            color: #403c4f;
+            line-height: 1.75;
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -27,20 +27,20 @@
             align-items: center;
             gap: 6px;
             padding: 8px 12px;
-            background: rgba(255,255,255,0.82);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(252,252,253,0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 40px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
-            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset, 0 2px 24px rgba(58,58,140,0.06);
+            border: 1px solid rgba(58,58,140,0.08);
         }
         .floating-nav .logo {
-            font-weight: 600;
+            font-weight: 650;
             color: #3a3a8c;
             text-decoration: none;
             padding: 8px 20px;
             font-size: 1.15rem;
-            letter-spacing: 2px;
+            letter-spacing: 2.5px;
             white-space: nowrap;
         }
         .floating-nav nav { display: flex; gap: 0; }
@@ -48,11 +48,11 @@
             display: block;
             padding: 8px 18px;
             text-decoration: none;
-            color: #999;
+            color: #8c8a9e;
             font-size: 0.95rem;
             letter-spacing: 1px;
             border-radius: 20px;
-            transition: all 0.25s;
+            transition: all 0.2s ease;
             white-space: nowrap;
         }
         .floating-nav nav a:hover {
@@ -79,11 +79,11 @@
         }
         .home-illust-bg .placeholder {
             width: 100%; height: 100%;
-            background: linear-gradient(180deg, #e8e8f8 0%, #f4f4f0 60%, #fafaf8 100%);
+            background: linear-gradient(180deg, #e8e4f8 0%, #f5f3f8 50%, #f9f8fc 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #d0d0d8;
+            color: #c5c0d4;
             font-size: 1rem;
             letter-spacing: 2px;
         }
@@ -100,16 +100,16 @@
         .home-avatar {
             width: 180px; height: 180px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.7);
-            backdrop-filter: blur(8px);
+            background: rgba(252,252,253,0.75);
+            backdrop-filter: blur(12px);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ccc;
+            color: #c5c0d4;
             font-size: 0.85rem;
             animation: float 3s ease-in-out infinite;
-            box-shadow: 0 4px 32px rgba(58,58,140,0.1);
-            border: 2px solid rgba(255,255,255,0.8);
+            box-shadow: 0 4px 32px rgba(58,58,140,0.08);
+            border: 2px solid rgba(252,252,253,0.9);
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -123,12 +123,13 @@
         .home-title { text-align: center; margin: 20px 0 8px; }
         .home-title h1 {
             font-size: 2.8rem;
-            font-weight: 400;
+            font-weight: 350;
             color: #3a3a8c;
             letter-spacing: 6px;
+            line-height: 1.2;
         }
         .home-title p {
-            color: #aaa;
+            color: #a09db5;
             font-size: 1.1rem;
             letter-spacing: 3px;
             margin-top: 4px;
@@ -136,11 +137,12 @@
 
         .card-row-wrap { margin-top: 40px; width: 100%; max-width: 100%; }
         .card-row-wrap .label {
-            font-size: 1rem;
-            color: #bbb;
-            letter-spacing: 3px;
+            font-size: 0.85rem;
+            color: #a09db5;
+            letter-spacing: 5px;
             margin-bottom: 20px;
             text-align: center;
+            font-weight: 500;
         }
         .card-row {
             display: flex;
@@ -154,13 +156,13 @@
         .card {
             flex: 0 0 clamp(200px, 25vw, 340px);
             scroll-snap-align: start;
-            background: rgba(255,255,255,0.7);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(0,0,0,0.06);
+            background: rgba(252,252,253,0.72);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(58,58,140,0.06);
             border-radius: 16px;
             padding: 36px 28px;
             text-decoration: none;
-            color: #444;
+            color: #403c4f;
             transition: all 0.3s ease;
             cursor: pointer;
             display: flex;
@@ -170,9 +172,9 @@
         }
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 28px rgba(0,0,0,0.08);
-            background: rgba(255,255,255,0.9);
-            border-color: rgba(0,0,0,0.1);
+            box-shadow: 0 12px 36px rgba(58,58,140,0.08);
+            background: rgba(252,252,253,0.92);
+            border-color: rgba(58,58,140,0.12);
         }
         .card .card-icon {
             width: 72px; height: 72px;
@@ -195,7 +197,7 @@
         }
         .card .card-desc {
             font-size: 0.95rem;
-            color: #aaa;
+            color: #8c8a9e;
             line-height: 1.5;
         }
 
@@ -203,9 +205,9 @@
             position: relative;
             z-index: 1;
             text-align: center;
-            padding: 32px;
-            color: #ddd;
-            font-size: 0.9rem;
+            padding: 48px 32px;
+            color: #b0adc4;
+            font-size: 0.85rem;
         }
 
         @media (max-width: 900px) {
